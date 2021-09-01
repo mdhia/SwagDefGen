@@ -16,6 +16,13 @@
 					    this.selectionEnd = s+1; 
 					}
 				}
+				// Handle shortcuts for convert
+				document.onkeyup = (e) => {
+					const code = e.keyCode || e.which;
+					if (e.ctrlKey && code === 13) {
+						convert();
+					}
+				};
 			};
 			
 		</script>
